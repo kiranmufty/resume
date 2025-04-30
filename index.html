@@ -1,124 +1,207 @@
- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiran Mufty's Resume</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiran Mufty’s Resume</title>
+  <style>
+    :root {
+      --pink-bg: #fdf1f4;
+      --pink-light: #fce4ec;
+      --pink-mid: #f8bbd0;
+      --pink-dark: #c2185b;
+      --text-color: #4a4a4a;
+      --highlight: #ad1457;
+    }
 
-        ul {
-            list-style: none;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        a {
-            color: #edb3f9;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background-color: var(--pink-bg);
+      color: var(--text-color);
+    }
 
-        body {
-            height: 100svh;
-            width: 100vw;
-            padding: 16px;
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+    header, section {
+      max-width: 800px;
+      margin: 0 auto 24px auto;
+      background: white;
+      border: 2px solid var(--pink-mid);
+      border-radius: 12px;
+      padding: 24px;
+      background-color: var(--pink-light);
+    }
 
-        body>header,
-        body>main,
-        body>footer {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-body>header {
-            border-bottom: 1px solid #888888;
-        }
+    header h1 {
+      text-align: center;
+      margin-bottom: 16px;
+      color: var(--highlight);
+    }
 
-        body>header>h1 {
-            text-align: center;
-        }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      list-style: none;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
 
-        nav>ul {
-            display: flex;
-            gap: 16px;
-            padding: 0 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    nav a {
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid var(--pink-mid);
+      border-radius: 8px 8px 0 0;
+      font-weight: bold;
+      color: var(--highlight);
+      background-color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-        nav>ul>li {
-            padding: 16px 0;
-        }
+    nav a:hover {
+      background-color: var(--highlight);
+      color: white;
+    }
 
-        nav>ul>li>a {
-            border: 1px solid #888888;
-            border-bottom-width: 0;
-            border-radius: 8px 8px 0 0;
-            padding: 16px;
-            font-weight: bolder;
-            text-decoration: none;
-        }
+    h2 {
+      border-left: 6px solid var(--pink-dark);
+      padding-left: 12px;
+      margin-bottom: 16px;
+      color: var(--highlight);
+    }
 
-        nav>ul>li>a:hover {
-            background-color: black;
-            color: white;
-        }
+    article {
+      margin-bottom: 24px;
+    }
 
-        section#objective,
-        section#certifications,
-        section#skills,
-        section#work-history {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 16px;
-            border-radius: 8px;
-            border: 1px solid #888888;
-        }
+    article h3 {
+      margin-bottom: 4px;
+      color: var(--pink-dark);
+    }
 
-        .skills-groups {
-            display: flex;
-        }
+    address p {
+      margin: 2px 0;
+    }
 
-        .skills-groups>article {
-            flex-grow: 1;
-            padding: 0 8px;
-        }
+    .job-details ul {
+      list-style: circle;
+      margin-left: 20px;
+    }
 
-        .skills-groups>article:nth-of-type(2) {
-            border: 1px solid #888888;
-            border-width: 0 1px;
-            padding: 0 16px;
-        }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-        .skills-groups>article:first-of-type {
-            padding-left: 0;
-        }
+    footer h2 {
+      color: var(--highlight);
+    }
 
-        .skills-groups>article:last-of-type {
-            padding-right: 0;
-        }
+    footer a {
+      display: inline-block;
+      margin: 0 8px;
+      color: var(--pink-dark);
+      text-decoration: none;
+    }
 
-        section#work-history>article {
-            display: flex;
-            gap: 16px;
-        }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-        section#work-history>article>header {
-            text-align: right;
-            width: 200px;
-        }
+  </style>
+</head>
+<body>
 
-        section#work-history ul {
-            list-style: circle;
-            padding: 16px;
-        }
+  <header>
+    <h1>Kiran Mufty’s Resume</h1>
+    <nav>
+      <ul>
+        <li><a href="#objective">Objective</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work-history">Work History</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="objective">
+    <h2>Objective</h2>
+    <p>
+      Librarian with experience in archives, metadata, and digital scholarship. Seeking to contribute to collections access, research support, and community engagement through thoughtful, inclusive librarianship.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Reference & Instruction</li>
+      <li>Archival Processing (DACS, ArchivesSpace)</li>
+      <li>Cataloging (MARC, RDA, OCLC Connexion)</li>
+      <li>Metadata Standards & Digital Projects</li>
+      <li>LibGuides, Springshare, HTML/CSS</li>
+    </ul>
+  </section>
+
+  <section id="work-history">
+    <h2>Work History</h2>
+
+    <article>
+      <h3>Faculty Librarian</h3>
+      <address>
+        <p>University of Central Arkansas</p>
+        <p>Conway, AR</p>
+        <p><time datetime="2024-08">August 2024</time> – Present</p>
+      </address>
+      <div class="job-details">
+        <ul>
+          <li>Provide research support and teach information literacy sessions</li>
+          <li>Maintain and promote subject LibGuides and digital tutorials</li>
+          <li>Collaborate on strategic planning, outreach, and collection development</li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <h3>Archivist</h3>
+      <address>
+        <p>California Academy of Sciences</p>
+        <p>San Francisco, CA</p>
+        <p><time datetime="2023-01">January 2023</time> – <time datetime="2024-07">July 2024</time></p>
+      </address>
+      <div class="job-details">
+        <ul>
+          <li>Processed and described archival materials using DACS and ArchivesSpace</li>
+          <li>Led digitization initiatives and expanded online access to rare collections</li>
+          <li>Supported exhibitions and research through reference and collaboration</li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <h3>Cataloging Intern</h3>
+      <address>
+        <p>Digital Theological Library</p>
+        <p>Remote</p>
+        <p><time datetime="2022-06">June 2022</time> – <time datetime="2022-12">December 2022</time></p>
+      </address>
+      <div class="job-details">
+        <ul>
+          <li>Created and enhanced MARC records in WorldCat using RDA and LCSH</li>
+          <li>Performed authority control and resolved metadata inconsistencies</li>
+          <li>Supported access and discoverability of open access religious resources</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:kiran@example.com"> kiran@email.com</a>
+      <a href="tel:1234567890">(123)456-7890a>
+      <a href="https://your-portfolio-site.com">your-portfolio-site.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
