@@ -39,4 +39,86 @@
             margin: 0 auto;
             max-width: 800px;
         }
+body>header {
+            border-bottom: 1px solid #888888;
+        }
 
+        body>header>h1 {
+            text-align: center;
+        }
+
+        nav>ul {
+            display: flex;
+            gap: 16px;
+            padding: 0 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav>ul>li {
+            padding: 16px 0;
+        }
+
+        nav>ul>li>a {
+            border: 1px solid #888888;
+            border-bottom-width: 0;
+            border-radius: 8px 8px 0 0;
+            padding: 16px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        nav>ul>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        section#objective,
+        section#certifications,
+        section#skills,
+        section#work-history {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #888888;
+        }
+
+        .skills-groups {
+            display: flex;
+        }
+
+        .skills-groups>article {
+            flex-grow: 1;
+            padding: 0 8px;
+        }
+
+        .skills-groups>article:nth-of-type(2) {
+            border: 1px solid #888888;
+            border-width: 0 1px;
+            padding: 0 16px;
+        }
+
+        .skills-groups>article:first-of-type {
+            padding-left: 0;
+        }
+
+        .skills-groups>article:last-of-type {
+            padding-right: 0;
+        }
+
+        section#work-history>article {
+            display: flex;
+            gap: 16px;
+        }
+
+        section#work-history>article>header {
+            text-align: right;
+            width: 200px;
+        }
+
+        section#work-history ul {
+            list-style: circle;
+            padding: 16px;
+        }
